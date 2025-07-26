@@ -9,7 +9,7 @@ for more options.
 // #define MASTER_RIGHT
 
 //#define TAPPING_TERM 170
-#define TAPPING_TERM 170
+#define TAPPING_TERM 200
 
 // Auto Shift
 #define NO_AUTO_SHIFT_ALPHA
