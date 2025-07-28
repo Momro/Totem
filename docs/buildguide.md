@@ -35,6 +35,8 @@
 
 ### 3DP CASE PARTS
 
+| Port name               | Count | Remarks |
+| :---------------------- | :---: | :------ |
 | 3D printed case        | 02 | Find the case files [here](/case) |
 | 6mm M2 standoffs       | 08 | [6mm round standoffs](https://www.amazon.de/dp/B0BWXKJD65) for screwing the top and bottom of the case together; use metal for self-printed cases |
 | 6mm M2 countersunk screws | 16 | ["Senkkopfschrauben"](https://www.amazon.de/dp/B0D1N4D5ZR) in German |
