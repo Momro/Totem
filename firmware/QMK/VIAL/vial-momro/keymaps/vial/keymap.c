@@ -1,10 +1,12 @@
 #include QMK_KEYBOARD_H
+#include "keymap_german.h"
+
+
 
 enum custom_keycodes {
     TRI_BRK_O = SAFE_RANGE, // Dein Custom Keycode
     // Füge hier weitere Custom Keycodes hinzu, wenn du sie brauchst
 };
-
 
 // Layer name definition
 #define _BASE 0
@@ -31,7 +33,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       │    Q    │    Z    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,    │    .    │    /    │    P    │
       └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                     │  CTRL   │  LOWER  │  SPACE  ││  ENTER  │  RAISE  │  BSPC   │
-                                    └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/
+                                    └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘
+	*/
 									
 									
 	/*
@@ -51,10 +54,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
                      KC_ESCAPE,     KC_COMMA,    KC_DOT,        KC_P,         KC_Z,  		 KC_F, 		  KC_G,         KC_C,         KC_T,         KC_Y,
-                     TD(10),        TD(11),      TD(12),        KC_I,         TD(14), 		 KC_H, 		  KC_D,         TD(19),       TD(20),       TD(21), 
-       KC_NO,        OSM(MOD_LCTL), TD(15),      TD(16),        TD(17),       TD(18), 		 KC_B,        KC_M,         KC_W,         KC_L,         KC_V,         KC_BTN1,
+                     KC_A,      KC_O,    KC_E,      KC_I,        KC_U, 	 KC_H, 		  KC_D,         KC_R,  KC_N,  KC_S, 
+       KC_BTN2,        OSM(MOD_LCTL), KC_Q, KC_J,   KC_K,  KC_X, 	 KC_B,        KC_M,         KC_W,         KC_L,         KC_V,         KC_BTN1,
+                                                 OSM(MOD_LSFT), KC_SPACE,     MO(1),     	 MO(2),       TT(3),        OSM(MOD_LALT)
+    ),	
+	[_SYMBOLS] = LAYOUT(
+		              KC_ESCAPE,     KC_COMMA,    KC_DOT,        KC_P,         KC_Z,  		 KC_F, 		  KC_G,         KC_C,         KC_T,         KC_Y,
+                     KC_A,      KC_O,    KC_E,      KC_I,        KC_U, 	 KC_H, 		  KC_D,         KC_R,  KC_N,  KC_S, 
+       KC_C,        OSM(MOD_LCTL), KC_Q, KC_J,   KC_K,  KC_X, 	 KC_B,        KC_M,         KC_W,         KC_L,         KC_V,         KC_BTN1,
                                                  OSM(MOD_LSFT), KC_SPACE,     MO(1),     	 MO(2),       TT(3),        OSM(MOD_LALT)
     ),
+	[_NUMBERS] = LAYOUT(
+         KC_ESCAPE,     KC_COMMA,    KC_DOT,        KC_P,         KC_Z,  		 KC_F, 		  KC_G,         KC_C,         KC_T,         KC_Y,
+                     KC_A,      KC_O,    KC_E,      KC_I,        KC_U, 	 KC_H, 		  KC_D,         KC_R,  KC_N,  KC_S, 
+       KC_C,        OSM(MOD_LCTL), KC_Q, KC_J,   KC_K,  KC_X, 	 KC_B,        KC_M,         KC_W,         KC_L,         KC_V,         KC_BTN1,
+                                                 OSM(MOD_LSFT), KC_SPACE,     MO(1),     	 MO(2),       TT(3),        OSM(MOD_LALT)
+    ),
+    [_MOVEMENT] = LAYOUT(
+               KC_ESCAPE,     KC_COMMA,    KC_DOT,        KC_P,         KC_Z,  		 KC_F, 		  KC_G,         KC_C,         KC_T,         KC_Y,
+                     KC_A,      KC_O,    KC_E,      KC_I,        KC_U, 	 KC_H, 		  KC_D,         KC_R,  KC_N,  KC_S, 
+       KC_C,        OSM(MOD_LCTL), KC_Q, KC_J,   KC_K,  KC_X, 	 KC_B,        KC_M,         KC_W,         KC_L,         KC_V,         KC_BTN1,
+                                                 OSM(MOD_LSFT), KC_SPACE,     MO(1),     	 MO(2),       TT(3),        OSM(MOD_LALT)
+    )
+	/*
 	[_SYMBOLS] = LAYOUT(
 		             RALT(KC_RBRC), RALT(KC_8), RALT(KC_7), LSFT(KC_8),   TD(9),   LSFT(KC_NONUS_BACKSLASH), LSFT(KC_9), RALT(KC_0), RALT(KC_9),   KC_GRAVE,
 		             TD(0),         TD(1),       TD(27),        TD(4),        LSFT(KC_0), KC_NONUS_HASH, RALT(KC_Q), TD(6), LSFT(KC_RBRC), RALT(KC_NONUS_BACKSLASH),
@@ -72,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_LGUI, KC_BTN2, KC_MS_D, KC_BTN1, LCTL(KC_C), KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, 
        KC_NO, OSM(MOD_LCTL), KC_WH_U, KC_BTN2, KC_WH_D, KC_TRNS, LCTL(KC_V), KC_BSPC, KC_DELETE, KC_PGDN, OSM(MOD_LCTL), KC_TRNS,
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TO(0), KC_TRNS
-    )
+    )*/
 };
 
 
