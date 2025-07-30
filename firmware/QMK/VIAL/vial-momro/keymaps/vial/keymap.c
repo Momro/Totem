@@ -77,13 +77,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
     LAYOUT(
-        'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 
-        'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 
-        'L','L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R',
-                    'L', 'L', 'L',  'R', 'R', 'R'
+             'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 
+             'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R',
+                       'L', 'L', 'L',  'R', 'R', 'R'
     );
 
-//nano to keeb communcation
+// I am using a Ploopy Nano as trackball, and this code is meant to automatically swap to nav layer once the Ploopy is moved
+// "nano to keeb communcation"
 bool led_update_user(led_t state) {
     // if already in mouse layer, don't change any layers
     if (state.scroll_lock != layer_state_is(_MOVEMENT)) {
