@@ -108,10 +108,12 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
 
 // I am using a Ploopy Nano as trackball, and this code is meant to automatically swap to nav layer once the Ploopy is moved
 // "nano to keeb communcation"
+/*
 bool led_update_user(led_t state) {
     // if already in mouse layer, don't change any layers
-    if (state.scroll_lock != layer_state_is(_MOVEMENT)) {
-        layer_invert(_MOVEMENT);
+    if (state.scroll_lock != layer_state_is(_AUTOMOUSE)) {
+        layer_invert(_AUTOMOUSE);
     }
     return true;
 }
+*/
